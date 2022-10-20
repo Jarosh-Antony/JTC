@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title> Home </title>
+	<meta name="description" content="This is the home page from where drinks are ordered"/>
+	<style>
+		td{
+			border:0px;
+			padding-left:30px;
+			padding-right:30px
+		}
+		table,#total,#links{
+			border:0px;
+			padding:15px;
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="catalogue">  
+		<table id='product-listing'>
+			
+		</table>
+	</div>
+	
+	<div id='placeOrder'>
+		<table>
+		
+			<tr>
+				
+				<th>Product</th>
+				<th>Add-on</th>
+				<th>#Cups</th>
+				<th>Rate</th>
+				<th></th>
+			</tr>
+			
+			<tr>
+				<td>
+					<label>Espresso</label> <input type="radio" id="product" name="product" value="0" onclick='show()' checked /><br>
+					<label>Cappuccino</label> <input type="radio" id="product" name="product" value="1" onclick='show()' /><br>
+					<label>Latte</label> <input type="radio" id="product" name="product" value="2" onclick='show()' /><br>
+				</td>
+				<td>
+					<label>Milk</label> <input type="radio" id="addon" name="addon" value="0" onclick='show()' checked /><br>
+					<label>Cream</label> <input type="radio" id="addon" name="addon" value="1" onclick='show()' /><br>
+					<label>Latte</label> <input type="radio" id="addon" name="addon" value="2" onclick='show()' /><br>
+				</td>
+				
+				<td><input type="number" id="quantity" name="quantity" value=1 checked/> </td>
+				<td id='rate'></td>
+				<td><button id='placeOrder' onclick='placeOrder()'>Place Order</button></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div>
+		<table id='bill'>
+		</table>
+	</div>
+	
+	
+	<div id='total'>
+	</div>
+	
+	
+	<div id='links'>
+	</div>
+	
+	<script src="q2.js">
+	</script>
+</body>
+</html>
